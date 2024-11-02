@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
   <body>
-    <div class="">
+    <div class="container-fluid">
+      {{ partial "header.html" . }}
       {{ block "main" . }}{{ end }}
-      <footer>{{ partial "footer.html" . }}</footer>
+      {{ partial "footer.html" . }}
     </div>
   </body>
 </html>

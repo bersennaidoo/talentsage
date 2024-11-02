@@ -1,0 +1,41 @@
+.c-main-home {
+    &__form-login {
+        max-inline-size: 100%;
+        padding: 1rem;
+    }
+    &__form-floating:focus-within {
+        z-index: 2;
+    }
+    &__form-login input[type=email] {
+        margin-bottom: -1px; 
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+    &__form-login input[type=password] {
+        margin-bottom: 10px;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+    &__login-cta {
+        color: color-contrast($light);
+        font-size: $spacer * 0.8;
+        font-weight: bold;
+    }
+    &__register-container {
+        max-inline-size: 100%;
+        padding: 1rem;
+    }
+    // celebration section
+    &__card-header {
+        block-size: 220px;
+        background-color: $darkest;
+        background-image: url(/images/card-4.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding-block-start: $spacer * 2;
+        color: tint-color($darkest, 90%);
+        font-size: $spacer * 8;
+        font-style: italic;
+    }
+
+}

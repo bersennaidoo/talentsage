@@ -167,7 +167,7 @@
   "devDependencies": {
     "@playwright/test": "^1.47.0"
   },
-  "name": "tourofheroes",
+  "name": "talentsage",
   "scripts": {
     "cucumber:e2e": "cucumber-js -p test_runner",
     "cy:comp:open": "cypress open --component",

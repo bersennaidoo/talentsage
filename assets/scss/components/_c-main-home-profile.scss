@@ -1,0 +1,86 @@
+.c-main-home {
+    &__profile {
+        display: flex;
+        flex-direction: column;
+        gap: $spacer * 0.3;
+    }
+    &__toggle {
+        margin-block-end: $spacer * 0.3;
+    }
+    &__dropdown {
+    }
+    &__dropdown-list {
+        display: flex;
+        flex-direction: column;
+        gap: $spacer * 0.1;
+        list-style-type: none;
+        padding-inline-start: 0;
+    }
+    &__dropdown-item {
+        flex: 1 1 auto;
+        border: $spacer * 0.1 solid $darkest;
+        padding-inline-start: $spacer;
+        padding-block: $spacer * 0.3;
+        background-color: $primary;
+    }
+    &__dropdown-link {
+        text-decoration: none;
+        color: color-contrast($primary)
+    }
+    &__password  {
+        margin-block-end: $spacer * 0.5;
+    }
+    &__username {
+        margin-block-end: $spacer * 0.7;
+    }
+    &__form-login {
+        margin-block-end: $spacer;
+    }
+    // section registration
+    &__registration {
+        margin-block-end: $spacer;
+    }
+    &__registration-list {
+        display: flex;
+        flex-direction: column;
+        gap: $spacer * 0.3;
+        list-style-type: none;
+        padding-inline-start: $spacer;
+        background-color: $white;
+        color: color-contrast($white);
+    }
+    &__feature1 {
+        margin-block-end: $spacer;
+    }
+    &__bg-img {
+        block-size: $spacer * 15;
+        background-image: url(/images/card-4.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    &__mini-gallery {
+        display: flex;
+        flex-direction: column;
+    }
+    &__gimg {
+        max-inline-size: 100%;
+    }
+}
+
+@include media-breakpoint-up(md) {
+    .c-main-home {
+        &__profile {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            gap: $spacer;
+        }
+        &__mini-gallery {
+            flex-direction: row;
+            gap: $spacer;
+        }
+    }
+}
+
+@include media-breakpoint-up(lg) {
+}

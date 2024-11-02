@@ -115,5 +115,127 @@ body {
   font-family: Roboto, sans-serif;
   line-height: 1.5;
   margin: unset;
-  background-color: #f2faff;
+  background-color: #fbfbfa;
   color: black; }
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: "header header header" "main main main" "footer footer footer";
+  gap: 1rem;
+  margin-inline: auto;
+  margin-block: 0;
+  padding-inline: 1rem;
+  max-inline-size: 25.25rem; }
+
+@media (min-width: 25.25rem) {
+  .container {
+    max-inline-size: 50.63rem; } }
+
+.c-main-home {
+  grid-column: main; }
+  .c-main-home__profile-header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem; }
+  .c-main-home__toggle {
+    flex: 1 1 auto;
+    border: 0.05rem solid #766f57;
+    background-color: #fbfbfa;
+    color: #766f57; }
+  .c-main-home__login-cta {
+    flex: 1 1 auto;
+    font-weight: bold;
+    color: #d4d1c5; }
+  .c-main-home__dropdown {
+    flex: 1 1 auto; }
+  .c-main-home__dropdown-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    list-style-type: none;
+    padding: 0; }
+  .c-main-home__dropdown-item {
+    flex: 1 1 auto;
+    border: 1px solid white;
+    background-color: #766f57;
+    padding: 0.5rem; }
+  .c-main-home__dropdown-link {
+    text-decoration: none;
+    color: #fbfbfa; }
+  .c-main-home__form-control {
+    display: block;
+    inline-size: 100%; }
+  .c-main-home__form-text {
+    color: #d4d1c5;
+    font-weight: bold; }
+  .c-main-home__list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; }
+  .c-main-home__bg-img {
+    background-image: url(/images/card-4.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    block-size: 200px;
+    inline-size: 25.25rem; }
+  .c-main-home__img {
+    display: inline-block;
+    margin-block: 1rem; }
+  .c-main-home__pimg {
+    text-align: center; }
+  .c-main-home__btn-submit {
+    margin-block-start: 0.5rem; }
+
+@media (min-width: 25.25rem) {
+  .c-main-home {
+    grid-column: main; }
+    .c-main-home__profile-header {
+      display: flex;
+      flex-direction: row;
+      gap: 0.5rem; }
+    .c-main-home__toggle {
+      flex: 1 1 auto;
+      border: 0.05rem solid #766f57;
+      background-color: #fbfbfa;
+      color: #766f57; }
+    .c-main-home__login-cta {
+      flex: 1 1 auto;
+      font-weight: bold;
+      color: #d4d1c5; }
+    .c-main-home__dropdown {
+      flex: 1 1 auto; }
+    .c-main-home__dropdown-list {
+      display: flex;
+      flex-direction: row;
+      gap: 0.5rem;
+      list-style-type: none; }
+    .c-main-home__dropdown-item {
+      flex: 1 1 auto;
+      background-color: #766f57;
+      padding-inline: 1rem;
+      padding-block: 0.5rem;
+      max-inline-size: 50%; }
+    .c-main-home__dropdown-link {
+      text-decoration: none;
+      color: #fbfbfa; }
+    .c-main-home__form-control {
+      inline-size: 30%; }
+    .c-main-home__registration {
+      display: flex;
+      flex-direction: row;
+      gap: 1rem; }
+    .c-main-home__list {
+      display: flex;
+      flex-direction: row;
+      gap: 1rem; }
+    .c-main-home__bg-img {
+      background-image: url(/images/card-4.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      block-size: 200px;
+      inline-size: 50.63rem; }
+    .c-main-home__mini-gallery {
+      display: flex;
+      flex-direction: row;
+      gap: 1rem; } }

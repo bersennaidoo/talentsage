@@ -1,0 +1,51 @@
+<main class="row c-main-home">
+    <section class="col-sm-12 c-main-home__profile">
+        <header class="c-main-home__profile-header">
+            <button class="btn btn-primary btn-md c-main-home__toggle">
+                <i class="fa fa-user"></i>
+            </button>
+            <p class="c-main-home__login-cta">
+                Log in to see your offers and bookings
+            </p>
+            <div class="c-main-home__dropdown">
+                <ul class="c-main-home__dropdown-list">
+                    <li class="c-main-home__dropdown-item"><a class="c-main-home__dropdown-link" href="#">Settings</a></li>
+                    <li class="c-main-home__dropdown-item"><a class="c-main-home__dropdown-link" href="#">Account Details</a></li>
+                </ul>
+            </div>
+        </header>
+        <form class="c-main-home__form-login">
+            <div class="c-main-home__username">
+                <label for="username" class="form-label c-main-home__form-label">Username</label>
+                <input type="text" class="form-control c-main-home__form-control" id="username" aria-describedby="usernameHelp" />
+                <div id="usernameHelp" class="form-text c-main-home__form-text">We'll never share your username with anyone else.</div>
+            </div>
+            <div class="c-main-home__password">
+                <label for="password" class="form-label c-main-home__form-label">Password</label>
+                <input type="password" class="form-control c-main-home__form-control" id="password"/>
+            </div>
+            <button type="submit" class="btn btn-primary c-main-home__btn-submit">Submit</button>
+        </form>
+    </section>
+    <section class="col-sm-12 c-main-home__registration">
+        <p class="c-main-home__intro">New to talent.net? Register for free</p>
+        <ul class="c-main-home__registration-list">
+            <li class="c-main-home__registration-item">Get great band offers</li>
+            <li class="c-main-home__registration-item">Manage your band bookings in one place</li>
+            <li class="c-main-home__registration-item">Save details for easier bookings</li>
+        </ul>
+        <button type="button" class="btn btn-primary btn-md c-main-home__registration-btn">Register now</button>
+    </section>
+    <section class="col-sm-12 c-main-home__feature1">
+        <header class="c-main-home__hero">
+            <div class="c-main-home__bg-img">100</div>
+            <p class="c-main-home__feature1-intro">20 years of Talent Sage</p>
+            <button type="button" class="btn btn-primary bt-md c-main-home__watch-now">Watch now</button>
+        </header>
+    </section>
+    <section class="col-sm-12 c-main-home__mini-gallery">
+        <p class="c-main-home__pimg"><img class="c-main-home__gimg" src="/images/592x333.png" alt="Image 1"  /></p>
+        <p class="c-main-home__pimg"><img class="c-main-home__gimg" src="/images/592x333.png" alt="Image 2"  /></p>
+        <p class="c-main-home__pimg"><img class="c-main-home__gimg" src="/images/592x333.png" alt="Image 3"  /></p>
+    </section>
+</main>
