@@ -22,6 +22,8 @@
   {{- end }}
 {{- end }}
 
+<link rel="stylesheet" href="/js/jquery-ui-1.13.3/jquery-ui.min.css" />
+
 {{- with resources.Get "css/hover.css/scss/hover.scss" | toCSS }}
   {{- if eq hugo.Environment "development" }}
     <link rel="stylesheet" href="{{ .RelPermalink }}">

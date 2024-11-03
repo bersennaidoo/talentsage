@@ -1,11 +1,3 @@
 {{ define "main" }}
-{{ .Title }}
-<nav>
-    <ul>
-        <li><a href="/admin/band">Band</a></li>
-        <li><a href="/admin/bandmembers">Members</a></li>
-        <li><a href="/admin/niteclub">Nite Club</a></li>
-        <li><a href="/admin/bookings">Bookings</a></li>
-    </ul>
-</nav>
+{{ partial "band/sidebarp.html" . }}
 {{ end }}
