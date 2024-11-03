@@ -1,3 +1,6 @@
+.m-container {
+    padding-block-start: 1500px;
+}
 .c-main-home {
     &__profile {
         display: flex;
@@ -6,8 +9,6 @@
     }
     &__toggle {
         margin-block-end: $spacer * 0.3;
-    }
-    &__dropdown {
     }
     &__dropdown-list {
         display: flex;

@@ -1,0 +1,22 @@
+.c-header-row {
+    &__col-logo {
+        margin: 0 1rem;
+    }
+    &__col-form {
+        margin: 0 1rem;
+    }
+    &__col-logo {
+        margin-right: auto;
+    }
+    &__logo {
+        max-inline-size: 100%;
+    }
+    // main nav col
+    &__main-nav {
+        background-color: $white;
+        background-image: url(/images/card-4.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        block-size: 400px;
+    }
+}

@@ -10495,39 +10495,50 @@ textarea.form-control-lg {
 .stack > * + * {
   margin-block-start: 1.5rem; }
 
-.c-main-home__form-login {
-  max-inline-size: 100%;
-  padding: 1rem; }
+.c-main-home {
+  margin-inline: 0.1rem; }
+  .c-main-home__form-login {
+    max-inline-size: 100%;
+    padding: 1rem; }
+  .c-main-home__form-floating:focus-within {
+    z-index: 2; }
+  .c-main-home__form-login input[type=email] {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0; }
+  .c-main-home__form-login input[type=password] {
+    margin-bottom: 10px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0; }
+  .c-main-home__register-container {
+    max-inline-size: 100%;
+    padding: 1rem; }
+  .c-main-home__card-header {
+    block-size: 220px;
+    background-color: black;
+    background-image: url(/images/card-4.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-block-start: 2rem;
+    color: #e6e6e6;
+    font-size: 8rem;
+    font-style: italic; }
 
-.c-main-home__form-floating:focus-within {
-  z-index: 2; }
+.c-header-row__col-logo {
+  margin: 0 1rem; }
 
-.c-main-home__form-login input[type=email] {
-  margin-bottom: -1px;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0; }
+.c-header-row__col-form {
+  margin: 0 1rem; }
 
-.c-main-home__form-login input[type=password] {
-  margin-bottom: 10px;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0; }
+.c-header-row__col-logo {
+  margin-right: auto; }
 
-.c-main-home__login-cta {
-  color: #000;
-  font-size: 0.8rem;
-  font-weight: bold; }
+.c-header-row__logo {
+  max-inline-size: 100%; }
 
-.c-main-home__register-container {
-  max-inline-size: 100%;
-  padding: 1rem; }
-
-.c-main-home__card-header {
-  block-size: 220px;
-  background-color: black;
+.c-header-row__main-nav {
+  background-color: white;
   background-image: url(/images/card-4.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  padding-block-start: 2rem;
-  color: #e6e6e6;
-  font-size: 8rem;
-  font-style: italic; }
+  block-size: 400px; }
