@@ -13,82 +13,103 @@ $(function () {
 
         // ajax request to backend with form data
 
+        $(".edit").attr("disabled", false);
+        $(".delete").attr("disabled", false);
+
         $(this).dialog("close");
       },
       Cancel: function () {
+        $(".edit").attr("disabled", false);
+        $(".delete").attr("disabled", false);
         $(this).dialog("close");
       },
     },
   });
   $(".create").on("click", function () {
-     
-		$( "#dialog-create" )
-        .dialog( "option", {
-            title: "Create Booking",
-        })
-        .dialog( "open" ); 
+    $(".edit").attr("disabled", true);
+    $(".delete").attr("disabled", true);
+
+    $("#dialog-create")
+      .dialog("option", {
+        title: "Create Booking",
+      })
+      .dialog("open");
   });
 });
 
-$(function() {
-    $( "#dialog-edit" ).dialog({
-		autoOpen: false,
-		buttons: {
-			Update: function() {
-				var date = $( "#Date" ).val(),
-					startTime = $( "#startTime" ).val(),
-                    endTime = $("#endTime").val()
-					row = $( this ).data( "editingRow" );
+$(function () {
+  $("#dialog-edit").dialog({
+    autoOpen: false,
+    buttons: {
+      Update: function () {
+        var date = $("#Date").val(),
+          startTime = $("#startTime").val(),
+          endTime = $("#endTime").val();
+        row = $(this).data("editingRow");
 
-				row.find( "td" ).eq( 1 ).text( date );
-				row.find( "td" ).eq( 2 ).text( startTime );
-				row.find( "td" ).eq( 3 ).text( endTime );
-				$( this ).dialog( "close" );
-			},
-			Cancel: function() {
-				$( this ).dialog( "close" );
-			}
-		}
-	});
+        row.find("td").eq(1).text(date);
+        row.find("td").eq(2).text(startTime);
+        row.find("td").eq(3).text(endTime);
 
-	$( "table" ).on( "click", ".edit", function() {
-		var row = $( this ).parents( "tr" ),
-			date = row.find( "td" ).eq( 1 ).text(),
-			startTime = row.find( "td" ).eq( 2 ).text(),
-			endTime = row.find( "td" ).eq( 3).text();
-		
-		$( "#Date" ).val( date );
-		$( "#startTime" ).val( startTime );
-		$( "#endTime" ).val( endTime );
+        $(".create").attr("disabled", false);
+        $(".delete").attr("disabled", false);
+        $(this).dialog("close");
+      },
+      Cancel: function () {
+        $(".create").attr("disabled", false);
+        $(".delete").attr("disabled", false);
 
-		$( "#dialog-edit" )
-			.dialog( "option", {
-				title: "Edit Booking",
-			})
-			.data( "editingRow", row )
-			.dialog( "open" ); 
-	});
-})
+        $(this).dialog("close");
+      },
+    },
+  });
 
-$(function() {
-    $( "#dialog-delete" ).dialog({
-		autoOpen: false,
-		buttons: {
-			Delete: function() {
-                $(this).dialog("close")
-			},
-			Cancel: function() {
-				$( this ).dialog( "close" );
-			}
-		}
-	});
+  $("table").on("click", ".edit", function () {
+    $(".create").attr("disabled", true);
+    $(".delete").attr("disabled", true);
+    var row = $(this).parents("tr"),
+      date = row.find("td").eq(1).text(),
+      startTime = row.find("td").eq(2).text(),
+      endTime = row.find("td").eq(3).text();
 
-	$( "table" ).on( "click", ".delete", function() {
+    $("#Date").val(date);
+    $("#startTime").val(startTime);
+    $("#endTime").val(endTime);
 
-		$( "#dialog-delete" )
-			.dialog( "option", {
-				title: "Delete Booking",
-			})
-			.dialog( "open" ); 
-	});
-})
+    $("#dialog-edit")
+      .dialog("option", {
+        title: "Edit Booking",
+      })
+      .data("editingRow", row)
+      .dialog("open");
+  });
+});
+
+$(function () {
+  $("#dialog-delete").dialog({
+    autoOpen: false,
+    buttons: {
+      Delete: function () {
+        $(".create").attr("disabled", false);
+        $(".edit").attr("disabled", false);
+        $(this).dialog("close");
+      },
+      Cancel: function () {
+        $(".create").attr("disabled", false);
+        $(".edit").attr("disabled", false);
+
+        $(this).dialog("close");
+      },
+    },
+  });
+
+  $("table").on("click", ".delete", function () {
+    $(".create").attr("disabled", true);
+    $(".edit").attr("disabled", true);
+    $("#dialog-delete")
+      .dialog("option", {
+        title: "Delete Booking",
+      })
+      .dialog("open");
+  });
+});
