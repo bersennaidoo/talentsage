@@ -1,6 +1,10 @@
 $(function () {
   $("#dialog-create").dialog({
+    closeOnEscape: false,
     autoOpen: false,
+    open: function() {
+        $(".ui-dialog-titlebar-close").hide()
+    },
     buttons: {
       Create: function () {
         /*var bandName = $("#bandName").val();
@@ -40,6 +44,9 @@ $(function () {
 $(function () {
   $("#dialog-edit").dialog({
     autoOpen: false,
+    open: function() {
+        $(".ui-dialog-titlebar-close").hide()
+    },
     buttons: {
       Update: function () {
         var date = $("#Date").val(),
@@ -88,6 +95,9 @@ $(function () {
 $(function () {
   $("#dialog-delete").dialog({
     autoOpen: false,
+    open: function() {
+        $(".ui-dialog-titlebar-close").hide()
+    },
     buttons: {
       Delete: function () {
         $(".create").attr("disabled", false);
