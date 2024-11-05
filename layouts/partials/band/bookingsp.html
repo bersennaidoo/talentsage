@@ -1,5 +1,5 @@
 <main class="table-responsive c-main-bookings-row">
-    <table class="table table-hover">
+    <table class="table table-info table-hover">
         <thead>
           <tr>
             <th scope="col">#</th>
@@ -9,6 +9,9 @@
             <th scope="col">Start Time</th>
             <th scope="col">End Time</th>
             <th scope="col">Fee</th>
+            <th scope="col">Create</th>
+            <th scope="col">Edit</th>
+            <th scope="col">Delete</th>
           </tr>
         </thead>
         <tbody>
@@ -21,13 +24,13 @@
             <td>23:30</td>
             <td>R800</td>
             <td>
-                <button class="create">Create</button>
+                <button class="create"><i class="fas fa-book"></i></button>
             </td>
             <td>
-                <button class="edit">Edit</button>
+                <button class="edit"><i class="fas fa-edit"></i></button>
             </td>
             <td>
-                <button class="delete">Delete</button>
+                <button class="delete"><i class="fas fa-trash"></i></button>
             </td>
           </tr>
           <tr>
@@ -38,14 +41,14 @@
             <td>21:30</td>
             <td>23:30</td>
             <td>R800</td>
-            <td>
-                <button class="create">Create</button>
+             <td>
+                <button class="create"><i class="fas fa-book"></i></button>
             </td>
             <td>
-                <button class="edit" >Edit</button>
+                <button class="edit"><i class="fas fa-edit"></i></button>
             </td>
             <td>
-                <button class="delete">Delete</button>
+                <button class="delete"><i class="fas fa-trash"></i></button>
             </td>
           </tr>
         </tbody>
@@ -94,5 +97,7 @@
             </div>
           </form>
       </div>
-      <div id="dialog-delete"></div>
+      <div id="dialog-delete">
+        <p>Please Confirm</p>
+      </div>
 </main>

@@ -1,7 +1,7 @@
 import * as esbuild from 'esbuild'
 
 await esbuild.build({
-  entryPoints: ['static/react/main.tsx'],
+  entryPoints: ['static/react/main.tsx', 'static/js/patterns/index.ts'],
   bundle: true,
   minify: true,
   sourcemap: true,

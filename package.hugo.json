@@ -79,7 +79,10 @@
     "@types/lowdb": "^1.0.15",
     "lowdb": "^7.0.1",
     "cors": "^2.8.5",
-    "@types/cors": "^2.8.17"
+    "@types/cors": "^2.8.17",
+    "@types/jqueryui": "^1.12.23",
+    "jquery-ui-dist": "^1.13.3",
+    "@types/jquery": "^3.5.32"
   },
   "devDependencies": {
     "@playwright/test": "^1.47.0"

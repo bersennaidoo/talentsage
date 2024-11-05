@@ -1,4 +1,4 @@
-$(function () {
+export const BookingTableCreate = () => {
   $("#dialog-create").dialog({
     closeOnEscape: false,
     height: 400,
@@ -19,21 +19,21 @@ $(function () {
 
         // ajax request to backend with form data
 
-        $(".edit").attr("disabled", false);
-        $(".delete").attr("disabled", false);
+        $(".edit").attr("disabled", false as any);
+        $(".delete").attr("disabled", false as any);
 
         $(this).dialog("close");
       },
       Cancel: function () {
-        $(".edit").attr("disabled", false);
-        $(".delete").attr("disabled", false);
+        $(".edit").attr("disabled", false as any);
+        $(".delete").attr("disabled", false as any);
         $(this).dialog("close");
       },
     },
   });
   $(".create").on("click", function () {
-    $(".edit").attr("disabled", true);
-    $(".delete").attr("disabled", true);
+    $(".edit").attr("disabled", true as any);
+    $(".delete").attr("disabled", true as any);
 
     $("#dialog-create")
       .dialog("option", {
@@ -41,9 +41,9 @@ $(function () {
       })
       .dialog("open");
   });
-});
+};
 
-$(function () {
+export const BookingTableEdit = () => {
   $("#dialog-edit").dialog({
     modal: true,
     autoOpen: false,
@@ -54,20 +54,20 @@ $(function () {
       Update: function () {
         var date = $("#Date").val(),
           startTime = $("#startTime").val(),
-          endTime = $("#endTime").val();
+          endTime = $("#endTime").val(),
         row = $(this).data("editingRow");
 
         row.find("td").eq(1).text(date);
         row.find("td").eq(2).text(startTime);
         row.find("td").eq(3).text(endTime);
 
-        $(".create").attr("disabled", false);
-        $(".delete").attr("disabled", false);
+        $(".create").attr("disabled", false as any);
+        $(".delete").attr("disabled", false as any);
         $(this).dialog("close");
       },
       Cancel: function () {
-        $(".create").attr("disabled", false);
-        $(".delete").attr("disabled", false);
+        $(".create").attr("disabled", false as any);
+        $(".delete").attr("disabled", false as any);
 
         $(this).dialog("close");
       },
@@ -75,8 +75,8 @@ $(function () {
   });
 
   $("table").on("click", ".edit", function () {
-    $(".create").attr("disabled", true);
-    $(".delete").attr("disabled", true);
+    $(".create").attr("disabled", true as any);
+    $(".delete").attr("disabled", true as any);
     var row = $(this).parents("tr"),
       date = row.find("td").eq(1).text(),
       startTime = row.find("td").eq(2).text(),
@@ -93,9 +93,9 @@ $(function () {
       .data("editingRow", row)
       .dialog("open");
   });
-});
+}
 
-$(function () {
+export const BookingTableDelete = () => {
   $("#dialog-delete").dialog({
     modal: true,
     autoOpen: false,
@@ -104,13 +104,13 @@ $(function () {
     },
     buttons: {
       Delete: function () {
-        $(".create").attr("disabled", false);
-        $(".edit").attr("disabled", false);
+        $(".create").attr("disabled", false as any);
+        $(".edit").attr("disabled", false as any);
         $(this).dialog("close");
       },
       Cancel: function () {
-        $(".create").attr("disabled", false);
-        $(".edit").attr("disabled", false);
+        $(".create").attr("disabled", false as any);
+        $(".edit").attr("disabled", false as any);
 
         $(this).dialog("close");
       },
@@ -118,12 +118,12 @@ $(function () {
   });
 
   $("table").on("click", ".delete", function () {
-    $(".create").attr("disabled", true);
-    $(".edit").attr("disabled", true);
+    $(".create").attr("disabled", true as any);
+    $(".edit").attr("disabled", true as any);
     $("#dialog-delete")
       .dialog("option", {
         title: "Delete Booking",
       })
       .dialog("open");
   });
-});
+}

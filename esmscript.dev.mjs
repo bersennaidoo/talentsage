@@ -1,7 +1,7 @@
 import * as esbuild from 'esbuild'
 
 let ctx = await esbuild.context({
-  entryPoints: ['static/react/main.tsx'],
+  entryPoints: ['static/react/main.tsx', 'static/js/patterns/index.ts'],
   bundle: true,
   sourcemap: true,
   loader: { '.png': 'file', '.jpg': 'file' },
