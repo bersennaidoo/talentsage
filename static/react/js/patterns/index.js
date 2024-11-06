@@ -11,7 +11,7 @@
         $(".ui-dialog-titlebar-close").hide();
       },
       buttons: {
-        Create: function() {
+        Submit: function() {
           $(".edit").attr("disabled", false);
           $(".delete").attr("disabled", false);
           $(this).dialog("close");
@@ -23,7 +23,17 @@
         }
       }
     });
-    $(".create").on("click", function() {
+    $("#dialog-create-form").on("submit", function() {
+      $.ajax({
+        type: "POST",
+        url: "/api/heroes",
+        data: $("#dialog-create-form").serialize(),
+        success: function(data) {
+          $("#dialog-create").dialog("close");
+        }
+      });
+    });
+    $("table").on("click", ".create", function() {
       $(".edit").attr("disabled", true);
       $(".delete").attr("disabled", true);
       $("#dialog-create").dialog("option", {
@@ -95,9 +105,38 @@
       }).dialog("open");
     });
   };
+  var BookingTableListJson = () => {
+    $(function() {
+      var num = 1;
+      $.getJSON("/api/heroes", (data) => {
+        const html = data.reduce((result, entry) => `
+      ${result}
+      <tr>
+        <th scope="row">${num++}</th>
+        <td>${entry.bandname}</td>
+        <td>${entry.clubname}</td>
+        <td>${entry.date}</td>
+        <td>${entry.startTime}</td>
+        <td>${entry.endTime}</td>
+        <td>${entry.fee}</td>
+        <td>
+            <button class="create"><i class="fas fa-book"></i></button>
+        </td>
+        <td>
+            <button class="edit"><i class="fas fa-edit"></i></button>
+        </td>
+        <td>
+            <button class="delete"><i class="bi bi-trash"></i></button>
+        </td>
+      </tr>`, "");
+        $("#booking-tbody").html(html);
+      });
+    });
+  };
 
   // static/js/patterns/index.ts
   var Main = () => {
+    BookingTableListJson();
     BookingTableCreate();
     BookingTableEdit();
     BookingTableDelete();

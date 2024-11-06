@@ -1,5 +1,9 @@
 export type Hero = {
   id: string;
-  name: string;
-  description: string;
+  bandname: string;
+  clubname: string;
+  date: string;
+  startTime: string;
+  endTime: string;
+  fee: string;
 };

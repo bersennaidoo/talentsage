@@ -11,35 +11,23 @@ export const seedHero = (list: Hero[]) => {
 };
 const heroes: Hero[] = [
   {
-    id: "HeroAslaug",
-    name: "Aslaug",
-    description: "warrior queen",
+    id: "Heartbreakers",
+    bandname: "Heartbreakers",
+    clubname: "East End",
+    date: "11/21/20",
+    startTime: "21:30",
+    endTime: "23:30",
+    fee: "R800",
   },
   {
-    id: "HeroBjorn",
-    name: "Bjorn Ironside",
-    description: "king of 9th century Sweden",
-  },
-  {
-    id: "HeroIvar",
-    name: "Ivar the Boneless",
-    description: "commander of the Great Heathen Army",
-  },
-  {
-    id: "HeroLagertha",
-    name: "Lagertha the Shieldmaiden",
-    description: "aka Hlaðgerðr",
-  },
-  {
-    id: "HeroRagnar",
-    name: "Ragnar Lothbrok",
-    description: "aka Ragnar Sigurdsson",
-  },
-  {
-    id: "HeroThora",
-    name: "Thora Town-hart",
-    description: "daughter of Earl Herrauðr of Götaland",
-  },
+    id: "Lightmetal",
+    bandname: "Lightmetal",
+    clubname: "East End",
+    date: "21/21/20",
+    startTime: "21:30",
+    endTime: "24:00",
+    fee: "R800",
+  }
 ];
 
 seedHero(heroes)

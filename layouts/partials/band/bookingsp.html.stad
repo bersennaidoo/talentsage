@@ -15,10 +15,46 @@
           </tr>
         </thead>
         <tbody id="booking-tbody">
+         <tr>
+            <th scope="row">1</th>
+            <td>Heartbreakers</td>
+            <td>East End</td>
+            <td>11/21/20</td>
+            <td>21:30</td>
+            <td>23:30</td>
+            <td>R800</td>
+            <td>
+                <button class="create"><i class="bi bi-save"></i></button>
+            </td>
+            <td>
+                <button class="edit"><i class="fas fa-edit"></i></button>
+            </td>
+            <td>
+                <button class="delete"><i class="bi bi-trash"></i></button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Lightmetal</td>
+            <td>East End</td>
+            <td>11/22/20</td>
+            <td>21:30</td>
+            <td>23:30</td>
+            <td>R800</td>
+             <td>
+                <button class="create"><i class="fas fa-book"></i></button>
+            </td>
+            <td>
+                <button class="edit"><i class="fas fa-edit"></i></button>
+            </td>
+            <td>
+                <button class="delete"><i class="fas fa-trash"></i></button>
+            </td>
+          </tr>
         </tbody>
       </table>
       <div id="dialog-create">
-        <form id="dialog-create-form" method="POST">
+        <form>
             <div class="mb-3">
               <label for="bandName" class="form-label">Band Name</label>
               <input type="text" class="form-control" id="bandName" placeholder="Band Name" aria-describedby="textHelp">
