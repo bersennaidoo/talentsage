@@ -1,8 +1,10 @@
+var url;
+
 export const newBooking = () => {
   $("#newUser").on("click", function () {
     $("#dlg").dialog("open").dialog("setTitle", "New User");
     $("#fm").form("clear");
-    var url = "/api/heroes";
+    url = "/api/heroes";
   });
 };
 
@@ -12,7 +14,7 @@ export const editBooking = () => {
     if (row) {
       $("#dlg").dialog("open").dialog("setTitle", "Edit User");
       $("#fm").form("load", row);
-      var url = "/api/heroes/" + row.id;
+      url = "/api/heroes/" + row.id;
     }
   });
 };
@@ -51,7 +53,7 @@ export const destroyBooking = () => {
 export const saveBooking = () => {
   $("#saveUser").on("click", function () {
     $("#fm").form("submit", {
-      url: "/api/heroes",
+      url: url,
       onSubmit: function () {
         return $(this).form("validate");
       },
