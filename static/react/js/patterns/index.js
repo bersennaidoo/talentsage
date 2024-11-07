@@ -1,11 +1,12 @@
 "use strict";
 (() => {
   // static/js/patterns/booking-table/booking-grid.ts
+  var url;
   var newBooking = () => {
     $("#newUser").on("click", function() {
       $("#dlg").dialog("open").dialog("setTitle", "New User");
       $("#fm").form("clear");
-      var url = "/api/heroes";
+      url = "/api/heroes";
     });
   };
   var editBooking = () => {
@@ -14,7 +15,7 @@
       if (row) {
         $("#dlg").dialog("open").dialog("setTitle", "Edit User");
         $("#fm").form("load", row);
-        var url = `/api/heroes/${row.id}`;
+        url = `/api/heroes/${row.id}`;
       }
     });
   };
@@ -51,12 +52,12 @@
   var saveBooking = () => {
     $("#saveUser").on("click", function() {
       $("#fm").form("submit", {
-        url: "/api/heroes",
+        url,
         onSubmit: function() {
           return $(this).form("validate");
         },
         success: function(result) {
-          var result = eval(`( ${result} )`);
+          var result = eval("(" + result + ")");
           if (result.errorMsg) {
             $.messager.show({
               title: "Error",
