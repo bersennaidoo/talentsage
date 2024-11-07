@@ -1,10 +1,10 @@
-import { BookingTableCreate, BookingTableDelete, BookingTableEdit, BookingTableListFetch, BookingTableListJson } from "./booking-table/booking_table"
+import { destroyBooking, editBooking, newBooking, saveBooking } from "./booking-table/booking-grid"
 
 const Main = () => {
-        BookingTableListJson()
-        BookingTableCreate()
-        BookingTableEdit()
-        BookingTableDelete()
+        newBooking()
+        editBooking()
+        destroyBooking()
+        saveBooking()
 }
 
 Main()

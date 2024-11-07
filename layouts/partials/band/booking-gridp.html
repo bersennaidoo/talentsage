@@ -1,0 +1,105 @@
+<main class="row">
+  <div class="col-sm-12 table-responsive">
+    <table
+      id="dg"
+      title="My Users"
+      class="easyui-datagrid"
+      style="inline-size: 100%; margin: 0 auto"
+      data-options="url:'/api/heroes',method:'get'"
+      toolbar="#toolbar"
+      rownumbers="true"
+      fitColumns="true"
+      singleSelect="true"
+    >
+      <thead>
+        <tr>
+          <th field="bandname" width="50">Band Name</th>
+          <th field="clubname" width="50">Club Name</th>
+          <th field="date" width="50">Date</th>
+          <th field="startTime" width="50">Start Time</th>
+          <th field="endTime" width="50">End Time</th>
+          <th field="fee" width="50">Fee</th>
+        </tr>
+      </thead>
+    </table>
+    <div id="toolbar">
+      <a
+        href="#"
+        id="newUser"
+        class="easyui-linkbutton"
+        iconCls="icon-add"
+        plain="true"
+        >New Booking</a
+      >
+      <a
+        href="#"
+        class="easyui-linkbutton"
+        iconCls="icon-edit"
+        plain="true"
+        id="editUser"
+        >Edit Booking</a
+      >
+      <a
+        href="#"
+        class="easyui-linkbutton"
+        iconCls="icon-remove"
+        plain="true"
+        id="destroyUser"
+        >Remove Booking</a
+      >
+    </div>
+    <div
+      id="dlg"
+      class="easyui-dialog"
+      style="width: 400px; height: 280px; padding: 10px 20px"
+      closed="true"
+      buttons="#dlg-buttons"
+    >
+      <div class="ftitle">Booking Information</div>
+      <form id="fm" method="post" novalidate>
+        <div class="fitem">
+          <label>Band Name:</label>
+          <input name="bandname" class="easyui-textbox" required="true" />
+        </div>
+        <div class="fitem">
+          <label>Club Name:</label>
+          <input name="clubname" class="easyui-textbox" required="true" />
+        </div>
+        <div class="fitem">
+          <label>Date:</label>
+          <input name="date" class="easyui-textbox" />
+        </div>
+        <div class="fitem">
+          <label>Start Time:</label>
+          <input name="startTime" class="easyui-textbox" />
+        </div>
+         <div class="fitem">
+          <label>End Time:</label>
+          <input name="endTime" class="easyui-textbox" />
+        </div>
+         <div class="fitem">
+          <label>Fee:</label>
+          <input name="fee" class="easyui-textbox" />
+        </div>
+      </form>
+    </div>
+    <div id="dlg-buttons">
+      <a
+        href="javascript:void(0)"
+        class="easyui-linkbutton c6"
+        iconCls="icon-ok"
+        id="saveUser"
+        style="width: 90px"
+        >Save</a
+      >
+      <a
+        href="javascript:void(0)"
+        class="easyui-linkbutton"
+        iconCls="icon-cancel"
+        onclick="javascript:$('#dlg').dialog('close')"
+        style="width: 90px"
+        >Cancel</a
+      >
+    </div>
+  </div>
+</main>

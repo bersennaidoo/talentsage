@@ -9,11 +9,21 @@ export const BookingTableCreate = () => {
     },
     buttons: {
       Submit: function () {
-
+        var bandname = $("#bandName").val()
+        var clubname = $("#clubName").val()
+        var date = $("#Date").val()
+        var startTime = $("#startTime").val()
+        var endTime = $("#endTime").val()
+        var fee = $("#Fee").val()
+        $.post(
+          "/api/heroes",
+          {bandname: bandname, clubname: clubname, date: date, startTime: startTime, endTime: endTime, fee: fee}
+        )
         $(".edit").attr("disabled", false as any);
         $(".delete").attr("disabled", false as any);
 
         $(this).dialog("close");
+        BookingTableListJson()
       },
       Cancel: function () {
         $(".edit").attr("disabled", false as any);
@@ -22,16 +32,7 @@ export const BookingTableCreate = () => {
       },
     },
   });
-  $("#dialog-create-form").on("submit", function() {
-    $.ajax({
-      type: 'POST',
-      url: '/api/heroes',
-      data: $("#dialog-create-form").serialize(),
-      success: function(data) {
-        $("#dialog-create").dialog("close")
-      }
-    })
-  })
+
   $("table").on("click", ".create", function () {
     $(".edit").attr("disabled", true as any);
     $(".delete").attr("disabled", true as any);
@@ -104,7 +105,9 @@ export const BookingTableDelete = () => {
         $(".ui-dialog-titlebar-close").hide()
     },
     buttons: {
-      Delete: function () {
+      Delete: function (e) {
+        e?.preventDefault()
+        
         $(".create").attr("disabled", false as any);
         $(".edit").attr("disabled", false as any);
         $(this).dialog("close");

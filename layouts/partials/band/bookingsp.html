@@ -1,5 +1,5 @@
 <main class="table-responsive c-main-bookings-row">
-    <table class="table table-info table-hover">
+    <table id="booking-table" class="table table-info table-hover">
         <thead>
           <tr>
             <th scope="col">#</th>
@@ -18,7 +18,7 @@
         </tbody>
       </table>
       <div id="dialog-create">
-        <form id="dialog-create-form" method="POST">
+        <form id="dialog-create-form">
             <div class="mb-3">
               <label for="bandName" class="form-label">Band Name</label>
               <input type="text" class="form-control" id="bandName" placeholder="Band Name" aria-describedby="textHelp">
@@ -64,6 +64,4 @@
       <div id="dialog-delete">
         <p>Please Confirm</p>
       </div>
-
-      <div id="heroes"></div>
 </main>
