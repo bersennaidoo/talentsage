@@ -12,7 +12,7 @@ export const editBooking = () => {
     if (row) {
       $("#dlg").dialog("open").dialog("setTitle", "Edit User");
       $("#fm").form("load", row);
-      var url = "/api/heroes/" + row.id;
+      var url = `/api/heroes/${row.id}`;
     }
   });
 };
@@ -56,7 +56,7 @@ export const saveBooking = () => {
         return $(this).form("validate");
       },
       success: function (result) {
-        var result = eval("(" + result + ")");
+        var result = eval(`( ${result} )`);
         if (result.errorMsg) {
           $.messager.show({
             title: "Error",
