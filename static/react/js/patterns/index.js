@@ -72,27 +72,12 @@
     });
   };
 
-  // static/js/patterns/contact-form/contact-form.ts
-  var ContactForm = () => {
-    $("#talentsage-contact-form").on("submit", function(e) {
-      e.preventDefault();
-      const myForm = e.target;
-      const formData = new FormData(myForm);
-      fetch("/", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams(formData).toString()
-      }).then(() => alert("Thank you for your submission")).catch((error) => alert(error));
-    });
-  };
-
   // static/js/patterns/index.ts
   var Main = () => {
     newBooking();
     editBooking();
     destroyBooking();
     saveBooking();
-    ContactForm();
   };
   Main();
 })();

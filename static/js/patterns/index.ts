@@ -6,7 +6,7 @@ const Main = () => {
         editBooking()
         destroyBooking()
         saveBooking()
-        ContactForm()
+        //ContactForm()
 }
 
 Main()
