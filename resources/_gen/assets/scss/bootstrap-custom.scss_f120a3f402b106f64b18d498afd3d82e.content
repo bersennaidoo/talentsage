@@ -10524,21 +10524,19 @@ textarea.form-control-lg {
     font-size: 8rem;
     font-style: italic; }
 
-.c-header-row__col-logo {
-  margin: 0 1rem; }
-
-.c-header-row__col-form {
-  margin: 0 1rem; }
-
-.c-header-row__col-logo {
-  margin-right: auto; }
-
-.c-header-row__logo {
-  max-inline-size: 100%; }
-
-.c-header-row__main-nav {
-  background-color: white;
-  background-image: url(/images/card-4.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  block-size: 400px; }
+.c-header-row {
+  max-block-size: 530px; }
+  .c-header-row__col-logo {
+    margin: 0 1rem; }
+  .c-header-row__col-form {
+    margin: 0 1rem; }
+  .c-header-row__col-logo {
+    margin-right: auto; }
+  .c-header-row__logo {
+    max-inline-size: 100%; }
+  .c-header-row__main-nav {
+    background-color: white;
+    background-image: url(/images/card-4.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    block-size: 400px; }
